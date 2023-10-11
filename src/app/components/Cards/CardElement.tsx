@@ -1,6 +1,7 @@
 "use client";
 
 import useWindowSize from "@/app/hooks/useWindowSize";
+import Tag from "../UI/Tag";
 
 export type CardElementProps = {
   data: {
@@ -15,7 +16,7 @@ export type CardElementProps = {
 };
 
 export default function CardElement({ data, width, height }: CardElementProps) {
-  const windowSize = useWindowSize();  
+  const windowSize = useWindowSize();
   return (
     <li
       style={{
@@ -27,18 +28,13 @@ export default function CardElement({ data, width, height }: CardElementProps) {
       <div
         style={{ backgroundImage: `url(${data.logo})` }}
         className={`min-w-fit h-20 bg-no-repeat bg-cover border-grey320 rounded-lg`}
-      ><div className="w-20"></div></div>
+      >
+        <div className="w-20"></div>
+      </div>
       <div className="w-68 h-35">
-        <div className="flex gap-2">
+        <div className="flex gap-2 max-w-194px">
           {data.tags.map((tag) => {
-            return (
-              <div
-                key={tag}
-                className="flex px-3 justify-center items-center text-xs rounded-88px leading-18px text-blue1000 h-18px bg-white whitespace-nowrap"
-              >
-                {tag}
-              </div>
-            );
+            return <Tag key={tag} type="white" text={tag} />;
           })}
         </div>
         <h3 className="font-semibold text-lg mt-2 text-black900">

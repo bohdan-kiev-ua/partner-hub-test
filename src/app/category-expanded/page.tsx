@@ -1,6 +1,6 @@
 import ExpandedDescription from "../components/ExpandedDescription";
 import MainLayout from "../layouts/MainLayout";
-import ExpandedCards from "../components/ExpandedCards";
+import ExpandedSearch from "../components/ExpandedSearch";
 import sectionCards from "../../data/sectionCards.json";
 import CategoryTitle from "../components/shared/CategoryTitle";
 
@@ -14,7 +14,7 @@ export default function CategoryExpanded() {
    payments."
       />
       <ExpandedDescription />
-      <ExpandedCards cards={sectionCards} />
+      <ExpandedSearch cards={sectionCards} />
     </MainLayout>
   );
 }

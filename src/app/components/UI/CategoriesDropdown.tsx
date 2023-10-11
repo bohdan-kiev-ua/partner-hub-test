@@ -1,26 +1,26 @@
+import Dropdown from "./Dropdown";
+
 type CategoriesDropdownProps = {
-  categories: {
-    img: string;
-    title: string;
-  }[];
+  categories: string[];
 };
 
 export default function CategoriesDropdown({
   categories,
 }: CategoriesDropdownProps) {
   return (
-    <ul className="absolute top-11 right-0 p-2 hidden group-hover:flex flex-col gap-4 rounded-2xl shadow-cardShadow pt-1 bg-white">
-      {categories.map(({ img, title }) => {
-        return (
-          <li
-            key={title}
-            className="flex gap-2 items-center rounded-t w-64 hover:bg-grey320 hover:cursor-pointer whitespace-no-wrap"
-          >
-            <img src={img} alt={title} className="w-8 h-8" />
-            <p className="font-semibold text-sm text-black900">{title}</p>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="absolute top-12 right-0 hidden group-hover/categories:block">
+      <Dropdown className="pt-2 pb-4 pl-6 pr-4">
+        {categories.map((category) => {
+          return (
+            <li
+              key={category}
+              className="group/category-element flex items-center rounded-t h-12 hover:cursor-pointer"
+            >
+              <p className="text-sm group-hover/category-element:text-blue1000">{category}</p>
+            </li>
+          );
+        })}
+      </Dropdown>
+    </div>
   );
 }

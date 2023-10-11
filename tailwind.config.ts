@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         grey30: "#F6F7F9",
+        grey90: "#E6E9EA",
         grey320: "#EEF0F2",
         grey470: "#BBC3C3",
         grey550: "#6D7274",
@@ -29,21 +30,25 @@ const config: Config = {
       },
       fontSize: {
         "12px": "12px",
+        "18px": "18px",
         "22px": "22px",
         "32px": "32px",
       },
       lineHeight: {
         "18px": "18px",
         "30px": "30px",
+        "40px": "40px",
       },
       letterSpacing: {
-        "-0.64px": "-0.64px",
+        "-0.22px": "-0.22px",
         "-0.24px": "-0.24px",
+        "-0.64px": "-0.64px",
       },
       padding: {
         "5px": "5px",
         "8px": "8px",
         "18px": "18px",
+        "66px": "66px",
         "72px": "72px",
         "104px": "104px",
         "216px": "216px",
@@ -51,6 +56,7 @@ const config: Config = {
       height: {
         "35": "140px",
         "18px": "18px",
+        "52px": "52px",
         "86px": "86px",
         "178px": "178px",
         "240px": "240px",
@@ -63,6 +69,7 @@ const config: Config = {
         "70": "282px",
         "108": "405px",
         "112": "468px",
+        "72px": "72px",
         "90px": "90px",
         "115px": "115px",
         "117px": "117px",
@@ -72,6 +79,7 @@ const config: Config = {
         "328px": "328px",
         "375px": "375px",
         "404px": "404px",
+        "440px": "440px",
         "464px": "464px",
         "560px": "560px",
         "568px": "568px",
@@ -85,6 +93,9 @@ const config: Config = {
       },
       maxWidth: {
         "130px": "130px",
+        "194px": "194px",
+        "236px": "236px",
+        "312px": "312px",
         "404px": "404px",
         "1440px": "1440px",
       },
@@ -100,6 +111,10 @@ const config: Config = {
       },
       screens: {
         "xl-1440": "1440px",
+      },
+      spacing: {
+        "52px": "52px",
+        "70px": "70px",
       },
     },
   },

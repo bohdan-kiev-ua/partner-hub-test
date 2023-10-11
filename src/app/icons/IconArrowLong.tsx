@@ -1,4 +1,14 @@
-export default function IconArrowLong({ width, height, className }) {
+type IconArrowLongProps = {
+  width?: number;
+  height?: number;
+  className?: string;
+};
+
+export default function IconArrowLong({
+  width,
+  height,
+  className,
+}: IconArrowLongProps) {
   return (
     <svg
       width={width || "16"}
