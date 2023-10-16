@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SidebarCard = () => {
     return (
-        <div className={`w-[320px] h-auto rounded-2xl flex flex-col overflow-hidden bg-grey30 pb-6`}>
+        <div className={`w-[320px] rounded-2xl flex flex-col overflow-hidden bg-grey30 pb-6`}>
             <div className={`w-full p-6 flex items-center justify-between bg-blue1000 mb-2`}>
                 <div className={`w-20 h-20 rounded-lg relative`}>
                     <Image fill className={`w-full h-full absolute object-cover rounded-lg top-0 left-0`} src={'/images/partnerLogo1.png'} alt=""/>

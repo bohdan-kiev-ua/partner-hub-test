@@ -8,7 +8,10 @@ export default function HubCategory() {
     <>
       <MainLayout>
         <CategoryTitle
-          breadcrumbs={["Zeller Partner Hub", "Point of Sale"]}
+          breadcrumbs={[
+            { href: "/", text: "Zeller Partner Hub" },
+            { href: "hub-category", text: "Point of Sale" },
+          ]}
           title="Point of Sale"
           description="Connect Zeller Terminal with your Point of Sale for seamless card
    payments."

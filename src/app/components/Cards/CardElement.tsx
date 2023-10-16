@@ -1,7 +1,5 @@
-"use client";
-
-import useWindowSize from "@/app/hooks/useWindowSize";
 import Tag from "../UI/Tag";
+import Image from "next/image";
 
 export type CardElementProps = {
   data: {
@@ -11,25 +9,17 @@ export type CardElementProps = {
     logo: string;
     tags: string[];
   };
-  width: { mobile: string; desktop: string };
-  height: { mobile: string; desktop: string };
 };
 
-export default function CardElement({ data, width, height }: CardElementProps) {
-  const windowSize = useWindowSize();
+export default function CardElement({ data }: CardElementProps) {
   return (
     <li
-      style={{
-        width: windowSize.width >= 768 ? width.desktop : width.mobile,
-        height: windowSize.width >= 768 ? height.desktop : height.mobile,
-      }}
-      className={`flex gap-6 pt-4 pb-6 pl-4 pr-6 bg-blue50 rounded-2xl hover:bg-grey30 hover:cursor-pointer`}
+      className={`flex gap-6 pt-4 pb-6 pl-4 pr-6 max-w-404px bg-blue50 rounded-2xl hover:bg-grey30 hover:cursor-pointer`}
     >
       <div
-        style={{ backgroundImage: `url(${data.logo})` }}
-        className={`min-w-fit h-20 bg-no-repeat bg-cover border-grey320 rounded-lg`}
+        className={`relative min-w-[80px] h-20 bg-no-repeat bg-cover border-grey320 rounded-lg overflow-hidden`}
       >
-        <div className="w-20"></div>
+        <Image fill src={data.logo} alt={`${data.title} logo`} sizes="" />
       </div>
       <div className="w-68 h-35">
         <div className="flex gap-2 max-w-194px">

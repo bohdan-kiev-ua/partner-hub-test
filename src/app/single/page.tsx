@@ -13,7 +13,11 @@ const Page = () => {
     <MainLayout>
       <div className={`mt-24 ml-8 mb-[19px]`}>
         <Breadcrumbs
-          breadcrumbs={["Zeller Partner Hub", "Point of Sale", "H&L"]}
+          breadcrumbs={[
+            { href: "/", text: "Zeller Partner Hub" },
+            { href: "hub-category", text: "Point of Sale" },
+            { href: "single", text: "H&L" },
+          ]}
         />
       </div>
       <div
@@ -167,8 +171,10 @@ const Page = () => {
           </div>
           <div className={`h-px w-full bg-grey90 mt-2 mb-4`} />
         </div>
-        <div className={`hidden lg:block`}>
-          <SidebarCard />
+        <div className={`hidden lg:block pb-20`}>
+          <div className={`sticky top-[236px]`}>
+            <SidebarCard />
+          </div>
         </div>
       </div>
       <LargeCardsSection
@@ -183,22 +189,22 @@ const Page = () => {
             description:
               "Auctor ut aliquam, eleifend integer est varius at quam faucibus mi adipiscing convallis condimentum vel malesuada neque eu sit congue suspendisse orci maecenas.",
           },
-            {
-              img: "/images/businessTip-2.jpg",
-              date: "21.09.2023",
-              tags: ["Wellness & Productivity"],
-              title: "Interdum pellentesque lacus facilisi convallis suspendisse",
-              description:
-                "Auctor ut aliquam, eleifend integer est varius at quam faucibus mi adipiscing convallis condimentum vel malesuada neque eu sit congue suspendisse orci maecenas.",
-            },
-            {
-              img: "/images/partnerCard-1.jpg",
-              date: "21.09.2023",
-              tags: ["Wellness & Productivity"],
-              title: "Interdum pellentesque lacus facilisi convallis suspendisse",
-              description:
-                "Auctor ut aliquam, eleifend integer est varius at quam faucibus mi adipiscing convallis condimentum vel malesuada neque eu sit congue suspendisse orci maecenas.",
-            },
+          {
+            img: "/images/businessTip-2.jpg",
+            date: "21.09.2023",
+            tags: ["Wellness & Productivity"],
+            title: "Interdum pellentesque lacus facilisi convallis suspendisse",
+            description:
+              "Auctor ut aliquam, eleifend integer est varius at quam faucibus mi adipiscing convallis condimentum vel malesuada neque eu sit congue suspendisse orci maecenas.",
+          },
+          {
+            img: "/images/partnerCard-1.jpg",
+            date: "21.09.2023",
+            tags: ["Wellness & Productivity"],
+            title: "Interdum pellentesque lacus facilisi convallis suspendisse",
+            description:
+              "Auctor ut aliquam, eleifend integer est varius at quam faucibus mi adipiscing convallis condimentum vel malesuada neque eu sit congue suspendisse orci maecenas.",
+          },
         ]}
       />
       <div className={`w-full mt-[72px] mb-[80px]`}>

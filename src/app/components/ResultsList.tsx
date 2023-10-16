@@ -48,31 +48,19 @@ export default function ResultsList({
           onSubmit={onSubmit}
           setValue={setValue}
           cards={cards.filter(({ title }) =>
-            title.toLowerCase().includes(value.toLowerCase().trim())
+            title.toLowerCase().includes(value.toLowerCase().trim()),
           )}
           isInputActive={isInputActive}
           setIsInputActive={setIsInputActive}
         />
       </div>
-      <ul className="flex flex-wrap justify-center gap-8">
+      <div className="flex justify-center">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {cards.map((card) => {
-          return type === "hubCategory" ? (
-            <CardElement
-              key={card.id}
-              data={card}
-              width={{ mobile: "375px", desktop: "404px" }}
-              height={{ mobile: "179px", desktop: "176px" }}
-            />
-          ) : (
-            <CardElement
-              key={card.id}
-              data={card}
-              width={{ mobile: "358px", desktop: "380px" }}
-              height={{ mobile: "187px", desktop: "187px" }}
-            />
-          );
+          return <CardElement key={card.id} data={card} />;
         })}
       </ul>
+      </div>
       <div className="flex justify-end pr-6">
         <LongArrowLink
           className="flex-end lg:hidden mt-7"

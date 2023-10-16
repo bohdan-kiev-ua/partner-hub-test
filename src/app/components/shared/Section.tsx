@@ -1,5 +1,4 @@
 import CardElement from "../Cards/CardElement";
-import IconArrowLong from "../../icons/IconArrowLong";
 import LongArrowLink from "../UI/LongArrowLink";
 
 type SectionProps = {
@@ -37,18 +36,18 @@ export default function ({ title, link, description, cards }: SectionProps) {
             </p>
           </div>
         </div>
-        <ul className="flex flex-wrap justify-center 2xl:justify-normal gap-30px mt-8">
+        <div className="flex justify-center">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30px mt-8">
           {cards.map((card) => {
             return (
               <CardElement
                 key={card.id}
                 data={card}
-                width={{ mobile: "375px", desktop: "404px" }}
-                height={{ mobile: "178px", desktop: "176px" }}
               />
             );
           })}
         </ul>
+        </div>
         <div className="md:hidden h-7"></div>
       </div>
     </section>

@@ -52,7 +52,7 @@ export default function TitleSearch({
       <form onSubmit={onSubmit} className="relative">
         <label
           style={
-            windowSize.width < 768
+            windowSize.width < 1024
               ? { width: isFocused ? "198px" : "48px" }
               : {}
           }
@@ -76,7 +76,7 @@ export default function TitleSearch({
           <button
             type="submit"
             style={
-              windowSize.width < 768
+              windowSize.width < 1024
                 ? {
                     right: isFocused ? 20 : "50%",
                     transform: isFocused ? "translate(0, -50%)" : "",
