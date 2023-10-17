@@ -5,12 +5,16 @@ type CategoryTitleProps = {
   breadcrumbs: { href: string; text: string }[];
   title: string;
   description: string;
+  onLinkClick?: () => void;
+  descriptionHeight?: string | number;
 };
 
 export default function CategoryTitle({
   breadcrumbs,
   title,
   description,
+  onLinkClick,
+  descriptionHeight,
 }: CategoryTitleProps) {
   return (
     <section className="pt-104px">
@@ -20,8 +24,11 @@ export default function CategoryTitle({
           <h1 className="text-3xl font-semibold tracking-wider">{title}</h1>
           <h2 className="leading-6 font-semibold mt-3.5">{description}</h2>
         </div>
-        <div className="flex justify-end lg:justify-between h-12 items-center mt-1.5">
-          <LearnMoreLink />
+        <div
+            className="flex justify-end lg:justify-between h-12 items-center mt-1.5 cursor-pointer"
+            onClick={onLinkClick}
+        >
+          <LearnMoreLink descriptionHeight={descriptionHeight}/>
         </div>
       </div>
     </section>
